@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Caesar_Cipher" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ceasar's Cipher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3p-H8-UE1">
+                                <rect key="frame" x="0.0" y="44" width="414" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-9J-nJg">
+                                <rect key="frame" x="15" y="100" width="384" height="262.5"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlZ-j6-5tz" userLabel="CLEAR">
+                                <rect key="frame" x="15" y="362.5" width="384" height="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <state key="normal" title="CLEAR">
+                                    <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearTextToCode:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5SR-ZD-u2D"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i2B-oT-4zk" userLabel="parametersSV">
+                                <rect key="frame" x="103" y="405.5" width="208" height="85"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="UxS-k9-bbA">
+                                        <rect key="frame" x="0.0" y="0.0" width="208" height="32"/>
+                                        <subviews>
+                                            <stepper opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="13" maximumValue="25" id="bg2-3t-R9i">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="32"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <connections>
+                                                    <action selector="stepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="0Sv-r4-D2j"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROT 13" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNv-sZ-Ve6">
+                                                <rect key="frame" x="114" y="0.0" width="94" height="32"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="bgh-DI-hOf">
+                                        <rect key="frame" x="0.0" y="52" width="208" height="33"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaA-6V-Gby">
+                                                <rect key="frame" x="0.0" y="0.0" width="94" height="33"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Encode">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="encodeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2km-Og-HIc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lzu-d7-OhS" userLabel="Decode">
+                                                <rect key="frame" x="114" y="0.0" width="94" height="33"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Decode">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="decodeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hxC-qk-ZPo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ZaA-6V-Gby" firstAttribute="width" secondItem="Lzu-d7-OhS" secondAttribute="width" id="YRn-zh-3Tf"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.058934085070000003" green="0.55558151010000001" blue="0.31760874389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="zNv-sZ-Ve6" firstAttribute="width" secondItem="Lzu-d7-OhS" secondAttribute="width" id="DCb-7B-gHF"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="VqX-Z2-14j">
+                                <rect key="frame" x="15" y="571.5" width="384" height="262.5"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmQ-Ou-mf9">
+                                <rect key="frame" x="15" y="834" width="384" height="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleFootnote"/>
+                                <state key="normal" title="COPY TEXT">
+                                    <color key="titleColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyCoddedText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SRM-kR-9cy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VlZ-j6-5tz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="1bf-A7-ayi"/>
+                            <constraint firstItem="hmQ-Ou-mf9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="2n9-D6-Vg4"/>
+                            <constraint firstItem="IbR-9J-nJg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="303-Gn-xPm"/>
+                            <constraint firstItem="hmQ-Ou-mf9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="62q-pi-Tjl"/>
+                            <constraint firstItem="S3p-H8-UE1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="88b-iJ-6ve"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VqX-Z2-14j" secondAttribute="trailing" constant="15" id="HdH-FQ-cWd"/>
+                            <constraint firstItem="IbR-9J-nJg" firstAttribute="top" secondItem="S3p-H8-UE1" secondAttribute="bottom" constant="15" id="K9C-OI-ugH"/>
+                            <constraint firstItem="VqX-Z2-14j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LbO-0Z-WMa"/>
+                            <constraint firstAttribute="trailing" secondItem="S3p-H8-UE1" secondAttribute="trailing" id="Nhs-j4-kgR"/>
+                            <constraint firstItem="hmQ-Ou-mf9" firstAttribute="top" secondItem="VqX-Z2-14j" secondAttribute="bottom" id="OJx-JY-jVe"/>
+                            <constraint firstItem="i2B-oT-4zk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="a9m-jr-EOP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IbR-9J-nJg" secondAttribute="trailing" constant="15" id="bsp-KZ-bXD"/>
+                            <constraint firstItem="IbR-9J-nJg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="clQ-YT-9LK"/>
+                            <constraint firstItem="VqX-Z2-14j" firstAttribute="height" secondItem="IbR-9J-nJg" secondAttribute="height" id="d1Z-8W-vp0"/>
+                            <constraint firstItem="i2B-oT-4zk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hB6-dX-8Eo"/>
+                            <constraint firstItem="VlZ-j6-5tz" firstAttribute="top" secondItem="IbR-9J-nJg" secondAttribute="bottom" id="i69-IP-Ybr"/>
+                            <constraint firstItem="VqX-Z2-14j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="jJv-rb-JyM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VlZ-j6-5tz" secondAttribute="trailing" constant="15" id="mgu-yT-S36"/>
+                            <constraint firstItem="S3p-H8-UE1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="p86-DL-Sqq"/>
+                            <constraint firstItem="i2B-oT-4zk" firstAttribute="top" secondItem="VlZ-j6-5tz" secondAttribute="bottom" constant="15" id="pXc-QG-GfY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hmQ-Ou-mf9" secondAttribute="trailing" constant="15" id="yfv-gw-yEH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="codedTextTextView" destination="VqX-Z2-14j" id="hvE-BD-IHq"/>
+                        <outlet property="decodeButton" destination="Lzu-d7-OhS" id="njl-c7-NS9"/>
+                        <outlet property="encodeButton" destination="ZaA-6V-Gby" id="QrP-Lc-6wC"/>
+                        <outlet property="numberLabel" destination="zNv-sZ-Ve6" id="Vj1-8d-A2G"/>
+                        <outlet property="parametersStackView" destination="i2B-oT-4zk" id="3eD-Ur-ZUF"/>
+                        <outlet property="stepperStepper" destination="bg2-3t-R9i" id="h5P-vS-5VV"/>
+                        <outlet property="textToCodeTextView" destination="IbR-9J-nJg" id="AJv-aw-hfT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
